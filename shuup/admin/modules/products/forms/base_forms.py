@@ -203,10 +203,6 @@ class ShopProductForm(MultiLanguageModelForm):
         # TODO: Revise this. Since this is shop product form then maybe we should have shop available insted of request
         self.request = kwargs.pop("request", None)
         super(ShopProductForm, self).__init__(**kwargs)
-
-        if "default_price_value" in self.fields:
-            self.initial["default_price_value"] = self.initial["default_price_value"] or 0
-
         payment_methods_qs = PaymentMethod.objects.all()
         shipping_methods_qs = ShippingMethod.objects.all()
         if self.request:
@@ -478,7 +474,7 @@ class BaseProductMediaFormSet(BaseModelFormSet):
         qs = ProductMedia.objects.filter(product=self.product)
         if self.allowed_media_kinds:
             qs = qs.filter(kind__in=self.allowed_media_kinds)
-        return qs.distinct()
+        return qs
 
     def form(self, **kwargs):
         kwargs.setdefault("languages", self.languages)

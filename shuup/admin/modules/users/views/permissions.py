@@ -18,6 +18,7 @@ from django.utils.translation import ugettext_lazy as _
 from django.views.generic.edit import UpdateView
 
 from shuup.admin.forms.fields import Select2MultipleField
+from shuup.admin.shop_provider import get_shop
 from shuup.admin.toolbar import get_default_edit_toolbar
 from shuup.admin.utils.urls import get_model_url
 from shuup.utils.django_compat import force_text
@@ -36,7 +37,7 @@ class PermissionChangeFormBase(forms.ModelForm):
     def __init__(self, changing_user, *args, **kwargs):
         super(PermissionChangeFormBase, self).__init__(*args, **kwargs)
         self.changing_user = changing_user
-        if not getattr(self.changing_user, 'is_superuser', False):
+        if getattr(self.instance, 'is_superuser', False) and not getattr(self.changing_user, 'is_superuser', False):
             self.fields.pop("is_superuser")
 
         if not (
@@ -46,14 +47,13 @@ class PermissionChangeFormBase(forms.ModelForm):
             # Only require old password when editing
             self.fields.pop("old_password")
 
-        if "is_superuser" in self.fields:
-            self.fields["is_superuser"].label = _("Superuser (Full rights) status")
-            self.fields["is_superuser"].help_text = _(
-                "Designates whether this user has all permissions without explicitly "
-                "assigning them. Assigning Granular Permission Groups to a Superuser "
-                "will not have any effect because Granular Permission Groups are only "
-                " able to give more rights, but Superuser already has them all."
-            )
+        self.fields["is_superuser"].label = _("Superuser (Full rights) status")
+        self.fields["is_superuser"].help_text = _(
+            "Designates whether this user has all permissions without explicitly "
+            "assigning them. Assigning Granular Permission Groups to a Superuser "
+            "will not have any effect because Granular Permission Groups are only "
+            " able to give more rights, but Superuser already has them all."
+        )
         self.fields["is_staff"].label = _("Access to Admin Panel status")
         self.fields["is_staff"].help_text = _(
             "Designates whether this user can log into this admin site. Even "
@@ -160,6 +160,14 @@ class UserChangePermissionsView(UpdateView):
 
     def form_valid(self, form):
         form.save()
+
+        if not getattr(self.object, "is_superuser", False):
+            shop = get_shop(self.request)
+            if getattr(self.object, "is_staff", False):
+                shop.staff_members.add(self.object)
+            else:
+                shop.staff_members.remove(self.object)
+
         messages.success(self.request, _("Permissions changed for %s.") % self.object)
         return HttpResponseRedirect(self.get_success_url())
 

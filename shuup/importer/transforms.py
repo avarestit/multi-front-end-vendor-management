@@ -15,7 +15,6 @@ import openpyxl
 import six
 import xlrd
 from django.conf import settings
-from django.utils.encoding import force_text
 from django.utils.translation import ugettext_lazy as _
 
 from shuup.utils.excs import Problem
@@ -43,7 +42,7 @@ class XLSRowYielder(RowYielder):
 class XLSXRowYielder(RowYielder):
     def __iter__(self):
         for row in self.sheet_or_data.rows:
-            yield self.transform_values([(force_text(cell.value) if cell.value else None) for cell in row])
+            yield self.transform_values([cell.value for cell in row])
 
 
 class TransformedData(object):
@@ -70,7 +69,7 @@ def process_data(rows):
     if not len(data):
         for y, row in enumerate(rows):
             if y == 0:
-                headers = [x.lower().strip() for x in row if x]
+                headers = [x.lower().strip() for x in row]
                 continue
             datum = dict(zip(headers, row))
             got_data.update(set(h for (h, d) in six.iteritems(datum) if d))
@@ -108,6 +107,7 @@ def transform_file(mode, filename, data=None):
 
     headers = data[0].keys() if len(data) else []
     clean_keys = set(headers) - got_data
+
     for datum in data:
         for key in clean_keys:
             datum.pop(key, None)
@@ -122,8 +122,8 @@ def py2_read_file(data, filename):
         dialect = csv.Sniffer().sniff(f.read(1024))
         f.seek(0)
         for x, row in enumerate(csv.DictReader(f, dialect=dialect)):
-            got_data.update(set(h.lower() for (h, d) in six.iteritems(row) if d))
-            data.append(dict((k.lower(), v if v else None) for k, v in six.iteritems(row)))
+            got_data.update(set(h for (h, d) in six.iteritems(row) if d))
+            data.append(row)
     return data, got_data
 
 
@@ -143,6 +143,6 @@ def py3_read_file(data, filename):
         dialect = csv.Sniffer().sniff(f.read(1024))
         f.seek(0)
         for x, row in enumerate(csv.DictReader(f, dialect=dialect)):
-            got_data.update(set(h.lower() for (h, d) in six.iteritems(row) if d))
-            data.append(dict((k.lower(), v if v else None) for k, v in six.iteritems(row)))
+            got_data.update(set(h for (h, d) in six.iteritems(row) if d))
+            data.append(row)
     return data, got_data

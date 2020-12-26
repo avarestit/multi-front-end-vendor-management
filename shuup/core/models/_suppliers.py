@@ -5,8 +5,6 @@
 #
 # This source code is licensed under the OSL-3.0 license found in the
 # LICENSE file in the root directory of this source tree.
-from typing import TYPE_CHECKING, Union
-
 from django.db import models
 from django.utils.encoding import python_2_unicode_compatible
 from django.utils.text import slugify
@@ -23,9 +21,6 @@ from shuup.utils.analog import define_log_model
 
 from ._base import TranslatableShuupModel
 
-if TYPE_CHECKING:
-    from shuup.core.models import Shop
-
 
 class SupplierType(Enum):
     INTERNAL = 1
@@ -40,26 +35,8 @@ class SupplierQueryset(TranslatableQuerySet):
     def not_deleted(self):
         return self.filter(deleted=False)
 
-    def enabled(self, shop: Union['Shop', int] = None):
-        """
-        Filter the queryset to contain only enabled and approved suppliers.
-
-        If `shop` is given, only approved suppliers
-        for the given shop will be filtered.
-
-        `shop` can be either a Shop instance or the shop's PK
-        """
-        queryset = self.filter(
-            enabled=True,
-            supplier_shops__is_approved=True
-        ).not_deleted()
-
-        if shop:
-            from shuup.core.models import Shop
-            shop_id = shop.pk if isinstance(shop, Shop) else shop
-            queryset = queryset.filter(supplier_shops__shop_id=shop_id)
-
-        return queryset.distinct()
+    def enabled(self):
+        return self.filter(enabled=True, is_approved=True).not_deleted()
 
 
 @python_2_unicode_compatible
@@ -89,25 +66,17 @@ class Supplier(ModuleInterface, TranslatableShuupModel):
         "Supplier modules define the rules by which inventory is managed."
     ))
     module_data = JSONField(blank=True, null=True, verbose_name=_("module data"))
-
     shops = models.ManyToManyField(
-        "Shop",
-        blank=True,
-        related_name="suppliers",
-        verbose_name=_("shops"),
-        help_text=_("You can select which particular shops fronts the supplier should be available in."),
-        through="SupplierShop",
+        "Shop", blank=True, related_name="suppliers", verbose_name=_("shops"), help_text=_(
+            "You can select which particular shops fronts the supplier should be available in."
+        )
     )
     enabled = models.BooleanField(default=True, verbose_name=_("enabled"), help_text=_(
         "Indicates whether this supplier is currently enabled. In order to participate fully, "
         "the supplier also needs to be `Approved`."
     ))
     logo = FilerImageField(
-        verbose_name=_("logo"),
-        blank=True, null=True,
-        on_delete=models.SET_NULL,
-        related_name="supplier_logos"
-    )
+        verbose_name=_("logo"), blank=True, null=True, on_delete=models.SET_NULL, related_name="supplier_logos")
     contact_address = models.ForeignKey(
         "MutableAddress",
         related_name="supplier_addresses",
@@ -115,6 +84,10 @@ class Supplier(ModuleInterface, TranslatableShuupModel):
         blank=True, null=True,
         on_delete=models.SET_NULL
     )
+    is_approved = models.BooleanField(default=True, verbose_name=_("approved"), help_text=_(
+        "Indicates whether this supplier is currently approved for work. In order to participate fully, "
+        "the supplier also needs to be `Enabled`."
+    ))
     options = JSONField(blank=True, null=True, verbose_name=_("options"))
     translations = TranslatedFields(
         description=models.TextField(blank=True, verbose_name=_("description"))
@@ -199,19 +172,6 @@ class Supplier(ModuleInterface, TranslatableShuupModel):
         if not self.deleted:
             self.deleted = True
             self.save(update_fields=("deleted",))
-
-
-class SupplierShop(models.Model):
-    supplier = models.ForeignKey(Supplier, on_delete=models.CASCADE, related_name="supplier_shops")
-    shop = models.ForeignKey("shuup.Shop", on_delete=models.CASCADE, related_name="supplier_shops")
-    is_approved = models.BooleanField(
-        default=True,
-        verbose_name=_("Approved"),
-        help_text=_("Indicates whether this supplier is currently approved for work.")
-    )
-
-    class Meta:
-        unique_together = ("supplier", "shop")
 
 
 SupplierLogEntry = define_log_model(Supplier)

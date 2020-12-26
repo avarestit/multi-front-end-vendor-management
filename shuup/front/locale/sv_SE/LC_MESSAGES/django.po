@@ -4,15 +4,13 @@
 # 
 # Translators:
 # Frank Wickström <frwickst@gmail.com>, 2017
-# Panu Tulimäki <panu@shuup.com>, 2020
-# William Lindholm <william.lindholm@shuup.com>, 2020
 msgid ""
 msgstr ""
 "Project-Id-Version: Shuup\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-13 11:37+0000\n"
-"PO-Revision-Date: 2020-10-15 13:29+0000\n"
-"Last-Translator: Panu Tulimäki <panu@shuup.com>\n"
+"POT-Creation-Date: 2019-03-06 17:12+0000\n"
+"PO-Revision-Date: 2019-03-07 05:52+0000\n"
+"Last-Translator: Shuup Admin <admin@shuup.com>\n"
 "Language-Team: Swedish (Sweden) (http://www.transifex.com/shuup/shuup/language/sv_SE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,14 +32,6 @@ msgstr "Varukorgar"
 
 msgid "Show carts"
 msgstr "Visa varukorgar"
-
-msgid "Cart Inactivity Delay (hours)"
-msgstr "Vagnens inaktivitetsfördröjning (timmar)"
-
-msgid ""
-"Set the number of hours the cart must be inactive before it's displayed in "
-"Orders > Carts"
-msgstr "Ställ in hur många timmar vagnen måste vara inaktiv innan den visas i Order > Vagnar"
 
 msgid "Created on"
 msgstr "Skapad den"
@@ -77,73 +67,77 @@ msgid "Ordered"
 msgstr "Beställd"
 
 msgid "Require shipping method"
-msgstr "Kräver fraktmetod"
+msgstr ""
 
 msgid "Whether to require the shipping method in checkout phases."
-msgstr "Krävs val av fraktmetoden kassa faserna."
+msgstr ""
 
 msgid "Require payment method"
-msgstr "Kräva betalningsmetod"
+msgstr ""
 
 msgid "Whether to require the payment method in checkout phases."
-msgstr "Krävs val av betalningsmetoden i kassa faserna."
+msgstr ""
 
 msgid "Registration Settings"
-msgstr "Registrerings Inställningar"
+msgstr ""
 
 msgid "Allow company registration"
-msgstr "Tillåt företagsregistrering"
+msgstr ""
 
 msgid "If you select this, companies can register into your store."
-msgstr "Om du väljer detta kan företag registrera sig i din butik."
+msgstr ""
 
 msgid "Company registration requires approval"
-msgstr "Företagsregistrering kräver godkännande"
+msgstr ""
 
 msgid ""
 "Registered companies must be manually approved by admin if this is checked. "
 "This option has no effect if company registration is not allowed on your "
 "site."
-msgstr "Registrerade företag måste godkännas manuellt av admin om detta är markerat. Det här alternativet har ingen effekt om företagsregistrering inte är tillåten på din webbplats."
+msgstr ""
 
 msgid "Company tax number validation"
-msgstr "Validering av företagsskattnummer"
+msgstr ""
 
 msgid "Company tax number format is validated for European countries."
-msgstr "Företagsskatt nummerformat valideras för europeiska länder."
+msgstr ""
 
 msgid "Override shop's default configuration"
-msgstr "Åsidosätt butikens standardkonfiguration"
+msgstr ""
 
 msgid ""
 "If checked, this configuration will be used instead of the shop's default "
 "configuration."
-msgstr "Om det är markerat kommer denna konfiguration att användas istället för butikens standardkonfiguration."
+msgstr ""
 
 msgid "Available languages in storefront"
-msgstr "Tillgängliga språk på webbplatsen"
+msgstr ""
 
 msgid ""
 "Select all the languages that should be available in storefront. Blank means"
 " that all languages should be available."
-msgstr "Välj alla språk som ska finnas tillgängliga på webbplatsen. Tom betyder att alla språk är tillgängliga."
-
-msgid "Try to remove some products from the basket and order them separately."
-msgstr "Försök ta bort vissa produkter från korgen och beställ dem separat."
+msgstr ""
 
 #, python-format
-msgid "Products in basket can't be shipped together. %s"
-msgstr "Produkter i korgen kan inte levereras tillsammans. %s"
+msgid "Basket loading failed: Incompatible basket (%s)"
+msgstr "Fel vid laddning av varukorg: Inkompatibel varukort (%s)"
+
+msgid "Try to remove some products from the basket and order them separately."
+msgstr ""
+
+#, python-format
+msgid "Products in basket cannot be shipped together. %s"
+msgstr ""
 
 #, python-format
 msgid "Products in basket have no common payment method. %s"
-msgstr "Produkter i korgen har ingen gemensam betalningsmetod. %s"
+msgstr ""
 
 msgid "Tax number is required with the company name."
-msgstr "Skattnummer krävs med företagsnamnet."
+msgstr ""
 
 msgid "Company name is required with the tax number."
-msgstr "Företagsnamn krävs med skattenummer."
+msgstr ""
 
 msgid "Use a saved address"
 msgstr "Använd en sparad adress"
@@ -207,8 +201,8 @@ msgstr "Namn - A-Ö"
 msgid "Name - Z-A"
 msgstr "Namn - Ö-A"
 
-msgid "Enable this to allow products to be sortable by product name."
-msgstr "Aktivera detta så att produkter kan sorteras efter produktnamn."
+msgid "Check this to allow products to be sortable by product name."
+msgstr "Markera det här för att låta produkter vara sorterbara enligt produktnamn."
 
 msgid ""
 "Use a numeric value to set the order in which the the filter will appear on "
@@ -228,9 +222,9 @@ msgid "Price - High to Low"
 msgstr "Pris - fallande"
 
 msgid ""
-"Enable this to allow products to be sortable by price (from low to high; "
-"from high to low)."
-msgstr "Aktivera detta för att låta produkter sorteras efter pris (från låg till hög; från hög till låg)."
+"Check this to allow products to be sortable by price (from low to high and "
+"high to low)."
+msgstr "Markera det här för att låta produkter vara sorterbara enligt pris (stigande och fallande)."
 
 msgid "Sort products by date created"
 msgstr "Sortera produkter enligt datumet de skapades"
@@ -242,8 +236,8 @@ msgid "Date created"
 msgstr "Skapad den"
 
 msgid ""
-"Enable this to allow products to be sortable from newest to oldest products."
-msgstr "Aktivera detta för att tillåta att produkter kan sorteras från nyaste till äldsta produkter."
+"Check this to allow products to be sortable from newest to oldest products."
+msgstr "Markera det här för att låta produkter vara sorterbara från nyaste till äldsta produkter."
 
 msgid ""
 "Use a numeric value to set the order in which the filter will appear on the "
@@ -260,8 +254,8 @@ msgid "Date created - oldest first"
 msgstr "Skapad den - äldsta först"
 
 msgid ""
-"Enable this to allow products to be sortable from oldest to newest products."
-msgstr "Aktivera detta för att tillåta att produkter kan sorteras från äldsta till nyaste produkter."
+"Check this to allow products to be sortable from oldest to newest products."
+msgstr "Markera det här för att låta produkter vara sorterbara från äldsta till nyaste produkter."
 
 msgid "Filter products by manufacturer"
 msgstr "Filtrera produkter enligt tillverkare"
@@ -273,9 +267,9 @@ msgid "Manufacturers"
 msgstr "Tillverkare"
 
 msgid ""
-"Enable this to allow products to be filterable by manufacturer for this "
+"Check this to allow products to be filterable by manufacturer for this "
 "category."
-msgstr "Aktivera detta för att tillåta att produkter kan filtreras av tillverkare för denna kategori."
+msgstr "Markera det här för att låta produkter vara filtrerarbara enligt tillverkaren i denna kategori."
 
 msgid ""
 "Use a numeric value to set the order in which the manufacturer filters will "
@@ -292,9 +286,9 @@ msgid "Categories"
 msgstr "Kategorier"
 
 msgid ""
-"Enable this to allow products to be filterable by any visible product "
+"Check this to allow products to be filterable by any visible product "
 "category. "
-msgstr "Aktivera detta för att tillåta att produkter kan filtreras efter någon synlig produktkategori."
+msgstr "Markera det här för att låta produkter vara filtrererbara av något synlig produktkategori."
 
 msgid ""
 "Use a numeric value to set the order in which the category list filters will"
@@ -311,9 +305,9 @@ msgid "Products per page"
 msgstr "Produkter per sida"
 
 msgid ""
-"Enable this to allow the customer to be able to select the number of "
-"products to display."
-msgstr "Aktivera detta så att kunden kan välja antalet produkter som ska visas."
+"Check this to allow the customer to be able to select the number of products"
+" to display."
+msgstr "Markera det här för att göra det möjligt för kunden att kunna välja antalet produkter att visa."
 
 msgid ""
 "Use a numeric value to set the order in which the page size filter will "
@@ -327,9 +321,9 @@ msgid "Ordering for filter by variation"
 msgstr "Ordning för filtrering enligt variant"
 
 msgid ""
-"Enable this to allow products to be filterable by their different "
-"variations. For example, size or color."
-msgstr "Aktivera detta så att produkter kan filtreras efter olika variationer. Till exempel storlek eller färg."
+"Check this to allow products to be filterable by their different variations."
+" For example, size or color."
+msgstr "Markera det här för att låta produkter vara filtrerbara enligt sina olika varianter. Till exempel, storlek eller färg."
 
 msgid ""
 "Use a numeric value to set the order in which the variation filters will "
@@ -346,10 +340,10 @@ msgid "Price"
 msgstr "Pris"
 
 msgid ""
-"Enable this to allow products to be filtered by price. Prices will be listed"
-" in groups from the price range minimum to price range maximum in increments"
-" of the configured price range step."
-msgstr "Aktivera detta för att tillåta att produkter filtreras efter pris. Priserna kommer att anges i grupper från prisintervallet minimalt till prisintervall i steg i det konfigurerade prisintervallsteget."
+"Check this to allow products to be filtered by price. Prices will be listed "
+"in groups from the price range minimum to price range maximum in increments "
+"of the configured price range step."
+msgstr "Markera det här för att låta produkter vara filtrerarbara enligt pris. Priserna kommer att visas i grupper från intervallens lägsta till högsta pris i steg enligt hur prisintevallen konfigurerats."
 
 msgid ""
 "Use a numeric value to set the order in which the price range filters will "
@@ -385,34 +379,28 @@ msgstr "Under %(min_limit)s"
 
 #, python-format
 msgid "%(min)s to %(max)s"
-msgstr "%(min)s till %(max)s"
+msgstr ""
 
 #, python-format
 msgid "%(max_limit)s & Above"
 msgstr "%(max_limit)s och över"
 
 msgid "Filter products by supplier"
-msgstr "Filtrera produkter efter leverantör"
+msgstr ""
 
 msgid "Ordering for filter by supplier"
-msgstr "Beställa filter efter leverantör"
+msgstr ""
 
 msgid "Suppliers"
-msgstr "Leverantörer"
+msgstr ""
 
-msgid "Enable this to allow products to be filterable by supplier."
-msgstr "Aktivera detta så att produkter kan filtreras av leverantör."
+msgid "Check this to allow products to be filterable by supplier."
+msgstr ""
 
 msgid ""
 "Use a numeric value to set the order in which the supplier filters will "
 "appear."
-msgstr "Använd ett numeriskt värde för att ställa in den ordning i vilken leverantörsfiltret ska visas."
-
-msgid "Allow multiselect suppliers"
-msgstr "Tillåt leverantörer med flera val"
-
-msgid "Filter by multiple suppliers at a time."
-msgstr "Filtrera efter flera leverantörer åt gången."
+msgstr ""
 
 msgid "Logged out since this account is inactive."
 msgstr "Du har loggats ut eftersom det här kontot är inaktivt."
@@ -477,24 +465,6 @@ msgstr "lagrad korg"
 msgid "stored baskets"
 msgstr "lagrade korgar"
 
-msgid "ID"
-msgstr "ID"
-
-msgid "Reference Number"
-msgstr "Referensnummer"
-
-msgid "Currency"
-msgstr "Valuta"
-
-msgid "Customer Name"
-msgstr "Köparens namn"
-
-msgid "Status"
-msgstr "Status"
-
-msgid "Shipping Method"
-msgstr "Frakt metod"
-
 msgid "Order Received"
 msgstr "Beställning mottagen"
 
@@ -515,15 +485,6 @@ msgstr "Butikens telefonnummer"
 
 msgid "Language"
 msgstr "Språk"
-
-msgid "Order Status Changed"
-msgstr "Orderstatus ändrad"
-
-msgid "Old Status"
-msgstr "Gammal status"
-
-msgid "New Status"
-msgstr "Ny status"
 
 msgid "Shipment Created"
 msgstr "Leverans skapad"
@@ -647,17 +608,14 @@ msgid ""
 "well as other informations like shipping method and payment method."
 msgstr "Detta script kommer att sända ett epostmeddelande till kunden eller den epostaddress som är specificerad när beställningen skapats. Beställningens innehåll kan vara del av meddelandet så även information om beställningens leverans och betalningssätt."
 
-msgid "Cart Inactivity Delay"
-msgstr "Vagnens inaktivitetsfördröjning"
-
 msgid "Checkout configuration"
-msgstr "Kassa konfiguration"
+msgstr ""
 
 msgid "Product list sorts and filters"
 msgstr "Produktlistans sorterings och filtreringsmöjligheter"
 
 msgid "Storefront Languages"
-msgstr "Webbplatsens Språk"
+msgstr ""
 
 msgid "Shopping cart"
 msgstr "Varukorg"
@@ -684,7 +642,7 @@ msgid "There are errors"
 msgstr "Fel uppstod"
 
 msgid "Please wait..."
-msgstr "Vänta..."
+msgstr ""
 
 msgid "My Dashboard"
 msgstr "Min översikt"
@@ -756,8 +714,8 @@ msgstr "Administrationsgränssnittet verkar inte finnas. Använda andra medel f�
 msgid "Product added to cart"
 msgstr "Produkten tillagd i kundvagnen"
 
-msgid "Adding the product to the basket failed."
-msgstr "Det gick inte att lägga till produkten i korgen."
+msgid "There was an error adding the product to the basket"
+msgstr "Ett fel uppstod när produkten skulle läggas till i korgen"
 
 msgid "Remove product from basket"
 msgstr "Ta bort produkten från korgen"
@@ -774,10 +732,10 @@ msgid "Proceed to checkout"
 msgstr "Fortsätt till kassan"
 
 msgid "Coupons applied"
-msgstr "Kuponger tillämpas"
+msgstr ""
 
-msgid "Do you have a coupon code? Enter it here. "
-msgstr "Har du en kupongkod? Ange det här."
+msgid "Have a coupon code? Enter it here"
+msgstr "Har du en rabattkod? (Skriv in det här)"
 
 msgid "Coupon Code"
 msgstr "Rabattkod"
@@ -797,26 +755,20 @@ msgstr "Spara"
 msgid "Back to Products"
 msgstr "Tillbaka till produkter"
 
-msgid "Error!"
-msgstr "Fel!"
-
 msgid "Invalid coupon code."
-msgstr "Ogiltig kupongkod."
+msgstr ""
 
-msgid "Removing a coupon failed."
-msgstr "Det gick inte att ta bort en kupong."
+msgid "Error when removing coupon."
+msgstr ""
 
 msgid "Coupon is not available."
 msgstr "Rabattkoden är inte giltig."
 
-msgid "Adding a coupon failed."
-msgstr "Det gick inte att lägga till en kupong."
+msgid "Error when adding coupon."
+msgstr "Ett fel uppstod när rabattkoden skulle användas."
 
-msgid "Success!"
-msgstr "Framgång!"
-
-msgid "Cart saved."
-msgstr "Kundvagnen sparad."
+msgid "Cart saved!"
+msgstr "Varukorgen är sparad!"
 
 msgid "Filter Products"
 msgstr "Filtrera produkter"
@@ -852,7 +804,7 @@ msgid "Choose Payment Method"
 msgstr "Välj betalningssätt"
 
 msgid "No method is available."
-msgstr "Ingen metod är tillgänglig."
+msgstr ""
 
 msgid "Delivery"
 msgstr "Leverans"
@@ -882,58 +834,58 @@ msgid "Next"
 msgstr "Nästa"
 
 #, python-format
-msgid "Items %(start_index)d to %(end_index)d of %(count)d total"
-msgstr "Objekt %(start_index)d till %(end_index)d av %(count)d totalt"
+msgid "Items %(start_index)d of %(end_index)d of %(count)d total"
+msgstr "Artiklarna %(start_index)d till %(end_index)d av %(count)d summan"
 
 msgid "Change visibility limit to"
-msgstr "Ändra sikt gränsen till"
+msgstr ""
 
 msgid "show only visible products and categories"
-msgstr "visa endast synliga produkter och kategorier"
+msgstr ""
 
 msgid "show all products and categories"
-msgstr "visa alla produkter och kategorier"
+msgstr ""
 
 msgid "Change customer to person contact mode"
-msgstr "Ändra kontaktläge från kund till person"
+msgstr ""
 
 msgid "Change customer to company contact mode"
-msgstr "Byt kund till företagskontakt läge"
+msgstr ""
 
 msgid "Change customer mode to guest"
-msgstr "Ändra kundläge till gäst"
+msgstr ""
 
 msgid "Tools"
 msgstr "Verktyg"
 
 msgid "Maintenance"
-msgstr "Underhåll"
+msgstr ""
 
 msgid "Live"
-msgstr "Live"
+msgstr ""
 
 msgid "Customer mode"
-msgstr "Kundläge"
+msgstr ""
 
 msgid "GUEST"
-msgstr "GÄST"
+msgstr ""
 
 msgid "COMPANY CONTACT"
-msgstr "FÖRETAGSKONTAKT"
+msgstr ""
 
 msgid "PERSON CONTACT"
-msgstr "PERSONSKONTAKT"
+msgstr ""
 
 msgid "Toggle navigation"
 msgstr "Visa/göm navigering"
 
 #, python-brace-format
 msgid "Edit '{object_title}' in administration page"
-msgstr "Redigera \"{object_title}\" på administrationssidan"
+msgstr ""
 
 #, python-brace-format
 msgid "Edit {object_name} in Admin"
-msgstr "Redigera {object_name} i Admin"
+msgstr ""
 
 msgid "Shop Administration"
 msgstr "Butikens administrering"
@@ -943,12 +895,12 @@ msgid ""
 msgstr "Ett fel inträffade när formuläret skickades. Kontrollera formulärets fält och försök igen."
 
 #, python-format
-msgid "By <strong>%(supplier_name)s</strong>"
-msgstr "Av <strong>%(supplier_name)s</strong>"
+msgid "By %(supplier_name)s"
+msgstr ""
 
 #, python-brace-format
 msgid "Available until: <span class=\"availability-date\">{date}</span></small>"
-msgstr "Tillgänglig till: <span class=\"availability-date\">{date}</span></small>"
+msgstr ""
 
 msgid "Edit account details"
 msgstr "Redigera kontouppgifter"
@@ -993,7 +945,7 @@ msgid "Files"
 msgstr "Filer"
 
 msgid "No method selected"
-msgstr "Ingen metod vald"
+msgstr ""
 
 msgid "Product"
 msgstr "Produkt"
@@ -1066,7 +1018,7 @@ msgid "Package Size"
 msgstr "Paketstorlek"
 
 msgid "Available Until"
-msgstr "Tillgänglig fram till"
+msgstr ""
 
 msgid "Width"
 msgstr "Bredd"
@@ -1097,7 +1049,7 @@ msgstr "Lägg i kundvagnen"
 
 #, python-brace-format
 msgid "Available until: {date}"
-msgstr "Tillgänglig till: {date}"
+msgstr ""
 
 msgid "Maintenance mode"
 msgstr "Underhållsläge"
@@ -1141,46 +1093,41 @@ msgstr "Kombination ej tillgänglig"
 msgid "Open product page"
 msgstr "Öppna produktsida"
 
+msgid "Newest products"
+msgstr "Nyaste produkter"
+
 msgid "Hide prices"
-msgstr "Dölj priser"
+msgstr ""
 
 msgid "Set shop in catalog mode"
-msgstr "Ställ butik i katalogläge"
+msgstr ""
 
 msgid "Show supplier info"
-msgstr "Visa leverantörsinformation"
+msgstr ""
 
 msgid ""
 "Show supplier name in product-box, product-detail, basket- and order-lines"
-msgstr "Visa leverantörens namn i produktlåda, produktdetalj, korg- och orderrader"
+msgstr ""
 
 msgid "Show Product Details"
-msgstr "Visa produktinformation"
+msgstr ""
 
 msgid ""
-"If you enable this, extra information will be shown on product page in "
+"If you check this, extra information will be shown on product page in "
 "frontend."
-msgstr "Om du aktiverar detta kommer extra information att visas på produktsidan i frontend."
-
-msgid "Show Variations as Buttons"
-msgstr "Visa variationer som knappar"
-
-msgid ""
-"If you enable this, the variations will be shown as buttons instead of "
-"dropdowns."
-msgstr "Om du aktiverar detta visas variationerna som knappar istället för rullgardinsmenyer."
+msgstr ""
 
 msgid "Product detail extra tab title"
-msgstr "Produktdetalj extra flik titel"
+msgstr ""
 
 msgid "Enter the title for the product detail extra tab."
-msgstr "Ange titeln för extra flik för produktdetaljer."
+msgstr ""
 
 msgid "Product detail extra tab content"
-msgstr "Produktdetaljer extra flikinnehåll"
+msgstr ""
 
 msgid "Enter the content for the product detail extra tab."
-msgstr "Ange innehållet för extra flik för produktdetaljer."
+msgstr ""
 
 msgid "Description"
 msgstr "Beskrivning"
@@ -1192,27 +1139,23 @@ msgid "Attributes"
 msgstr "Attribut"
 
 msgid "Product reviews"
-msgstr "Produktrecensioner"
+msgstr ""
 
 msgid "Product detail tabs"
-msgstr "Produktdetaljer flikar"
+msgstr ""
 
-msgid "Select all tabs that should be rendered in product details."
-msgstr "Välj alla flikar som ska återges i produktinformation."
+msgid "Select all tabs that should be renderd in product details."
+msgstr ""
 
 msgid "Tax number is not valid."
-msgstr "Skattenummer är inte giltigt."
+msgstr ""
 
 msgid "Edit"
 msgstr "Redigera"
 
 #, python-brace-format
-msgid "`{language_code}` is an invalid language code."
-msgstr "\"{language_code}\" är en ogiltig språkkod."
+msgid "{language_code} is an invalid language code"
+msgstr ""
 
-msgid "Error! This product is not available in this shop."
-msgstr "Fel! Denna produkt finns inte i denna butik."
-
-#, python-format
-msgid "Maximum file size reached (%(size)s MB)."
-msgstr "Maximal filstorlek uppnås (%(size)s MB)."
+msgid "This product is not available in this shop."
+msgstr "Produkten är inte tillgänglig i denna butik."

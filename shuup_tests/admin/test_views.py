@@ -207,7 +207,6 @@ def test_product_edit_view(rf, admin_user, settings):
         'base-name__ja': 'test',
         'base-name__pt-br': 'test',
         'base-name__zh-hans': 'test',
-        'base-name__es': 'test',
     })
 
     post_data = {

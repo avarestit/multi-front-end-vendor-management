@@ -79,7 +79,8 @@ class GenericSendEmailScriptTemplate(BaseScriptTemplate):
     def get_script_steps(self, form):
         action_data = {
             "template_data": {},
-            "language": {"constant": settings.PARLER_DEFAULT_LANGUAGE_CODE},
+            "language": {"variable": "language"},
+            "fallback_language": {"constant": settings.PARLER_DEFAULT_LANGUAGE_CODE},
         }
 
         if form["base"].cleaned_data.get("send_to") == "other":

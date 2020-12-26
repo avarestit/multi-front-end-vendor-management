@@ -146,7 +146,6 @@ LANGUAGES = [
     ('ru', 'Russian'),
     ('sv', 'Swedish'),
     ('zh-hans', 'Simplified Chinese'),
-    ('es', 'Spanish'),
 ]
 
 PARLER_DEFAULT_LANGUAGE_CODE = "en"
