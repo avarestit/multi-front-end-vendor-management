@@ -1,0 +1,23 @@
+{
+  "name": "shuup.notify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "build": "npm i && webpack",
+    "watch": "npm i && webpack --watch"
+  },
+  "author": "Shuup Team <support@shuup.com>",
+  "license": "OSL-3.0",
+  "private": true,
+  "dependencies": {
+    "autoprefixer-loader": "^3.2.0",
+    "classnames": "^2.2.5",
+    "css-loader": "^0.28.11",
+    "less": "^3.0.4",
+    "less-loader": "^4.1.0",
+    "node-libs-browser": "^2.1.0",
+    "style-loader": "^0.21.0",
+    "webpack": "^1.14.0"
+  }
+}
