@@ -50,7 +50,7 @@ shuup==2.1.11
 six==1.15.0               # via sphinx, bleach, django-filer, django-parler, jsonfield, packaging, python-dateutil, shuup
 snowballstemmer==2.0.0    # via sphinx
 sphinx==1.5.6
-sqlparse==0.4.1           # via django
+sqlparse==0.4.2           # via django
 toml==0.10.1              # via shuup
 unicodecsv==0.14.1        # via shuup
 unidecode==1.1.1          # via django-filer
