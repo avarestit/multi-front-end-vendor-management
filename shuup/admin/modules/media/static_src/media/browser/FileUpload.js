@@ -64,12 +64,8 @@ function handleFileXhrComplete(xhr, file, error) {
     var messageText = null;
     try {
         const responseJson = JSON.parse(xhr.responseText);
-        if (responseJson) {
-            if (responseJson.message) {
-                messageText = responseJson.message;
-            } else if (responseJson.error) {
-                messageText = responseJson.error;
-            }
+        if (responseJson && responseJson.message) {
+            messageText = responseJson.message;
         }
     } catch (e) {
         // invalid JSON? pffff.

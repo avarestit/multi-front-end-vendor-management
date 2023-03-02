@@ -80,7 +80,7 @@ def test_variation_product_price_simple(client):
 @pytest.mark.django_db
 def test_variation_product_price_more_complex(client):
     shop = get_default_shop()
-    supplier = get_default_supplier(shop)
+    supplier = get_default_supplier()
 
     product_data = {
         "supplier-1": {
@@ -98,7 +98,6 @@ def test_variation_product_price_more_complex(client):
     shop_parent_product = parent.get_shop_instance(shop)
     for key, data in six.iteritems(product_data):
         supplier = Supplier.objects.create(identifier=key)
-        supplier.shops.add(shop)
         for size in data["sizes"]:
             for color in data["colors"]:
                 for material in data["material"]:

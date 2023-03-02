@@ -530,7 +530,7 @@ const Picotable = (function (m, storage) {
             }
             return m("tr", rowSettings, Util.map(data.columns, function (col, idx) {
                 var content;
-                if (idx === 0 && massActions.length && (!item.hasOwnProperty("popup") || item.popup === false)) {
+                if (idx === 0 && massActions.length) {
                     content = m("div.input-checkbox", { onclick: preventSelect }, [
                         m("input[type=checkbox]", {
                             id: item._id,
@@ -545,17 +545,8 @@ const Picotable = (function (m, storage) {
                             title: gettext("Edit")
                         }, m("i.fa.fa-edit")) : null),
                     ]);
-                } else if (idx === 0 && massActions.length && item.popup === true) {
-                    content = m("div.input-checkbox", { onclick: preventSelect }, [
-                        m("button[type=button]", {
-                            class: "browse-btn btn btn-primary btn-sm",
-                            onclick: Util.boundPartial(ctrl, ctrl.pickObject, item)
-                        }, [
-                            m("i.fa.fa-folder"),
-                            gettext(" Select")
-                        ])
-                    ]);
-                } else {
+                }
+                else {
                     content = item[col.id] || "";
                 }
                 if (col.raw) {
@@ -682,7 +673,7 @@ const Picotable = (function (m, storage) {
                         rowClasses.push(...item._extra.class.split(" "));
                     }
                     return m("." + rowClasses.join("."), [
-                        (line.class && massActions.length && (!item.hasOwnProperty("popup") || item.popup === false) ?
+                        (line.class && massActions.length ?
                             m("div.input-checkbox", { onclick: preventSelect }, [
                                 m("input[type=checkbox]", {
                                     id: item._id,
@@ -694,17 +685,7 @@ const Picotable = (function (m, storage) {
                                 m("label", { for: item._id, }),
                                 (item._url ? m("a.edit", {href: item._url}, m("i.fa.fa-edit")) : null)
                             ])
-                        : (line.class && massActions.length && item.popup === true ?
-                                m("div.input-checkbox", { onclick: preventSelect }, [
-                                    m("button[type=button]", {
-                                        class: "browse-btn btn btn-primary btn-sm",
-                                        onclick: Util.boundPartial(ctrl, ctrl.pickObject, item)
-                                    }, [
-                                        m("i.fa.fa-folder"),
-                                        gettext(" Select")
-                                    ])
-                                ])
-                            : null)
+                            : null
                         ),
                         (line.title ? m(".col.title", line.title) : null),
                         m(".col.value", line.text)
@@ -1222,7 +1203,6 @@ const Picotable = (function (m, storage) {
             var url = ctrl.vm.url();
 
             ctrl.vm.isLoading = true;
-            m.redraw();
 
             if (!url) return;
             if (!Object.keys(ctrl.vm.filterValues()).length) {

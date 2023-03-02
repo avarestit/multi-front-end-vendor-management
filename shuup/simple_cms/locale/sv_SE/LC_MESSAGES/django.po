@@ -3,15 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Panu Tulimäki <panu@shuup.com>, 2020
-# William Lindholm <william.lindholm@shuup.com>, 2020
 msgid ""
 msgstr ""
 "Project-Id-Version: Shuup\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-22 17:54+0000\n"
-"PO-Revision-Date: 2020-09-29 18:06+0000\n"
-"Last-Translator: William Lindholm <william.lindholm@shuup.com>\n"
+"POT-Creation-Date: 2018-11-21 19:51+0000\n"
+"PO-Revision-Date: 2018-12-07 17:35+0000\n"
+"Last-Translator: Shuup Admin <admin@shuup.com>\n"
 "Language-Team: Swedish (Sweden) (http://www.transifex.com/shuup/shuup/language/sv_SE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "Content Pages"
-msgstr "Innehållssidor"
+msgstr ""
 
 msgid "Pages"
 msgstr "Sidor"
@@ -35,20 +33,20 @@ msgstr "Lägg till en webbsida"
 msgid "New page"
 msgstr "Ny sida"
 
-msgid "Available since"
-msgstr "Finns sedan"
+msgid "Available from"
+msgstr "Tillgänglig från"
 
-msgid "Available until"
-msgstr "Tillgänglig till"
+msgid "Available to"
+msgstr "Tillgängligt till"
 
 msgid "Template"
-msgstr "Mall"
+msgstr ""
 
 msgid "URL already exists."
 msgstr "Webbadressen finns redan"
 
-msgid "URL must be unique."
-msgstr "URL måste vara unik."
+msgid "URL must be unique"
+msgstr "Webbadressen måste vara unikt"
 
 #, python-format
 msgid "%(label)s is required when any %(language)s field is filled."
@@ -72,46 +70,39 @@ msgstr "Skapad den"
 msgid "Page"
 msgstr "Sida"
 
-#, python-format
-msgid "%s has been marked deleted."
-msgstr "%s har markerats borttagen."
-
 msgid "Content in this placeholder is shown for this page only."
-msgstr "Innehållet i denna platshållare visas endast för denna sida."
+msgstr ""
 
 #, python-format
 msgid "Content in this placeholder is shown for %(title)s only."
-msgstr "Innehållet i denna platshållare visas endast för %(title)s."
+msgstr ""
 
 msgid "Website"
-msgstr "Hemsida"
+msgstr ""
 
 msgid "Article"
-msgstr "Artikel"
+msgstr ""
 
 msgid "shop"
-msgstr "affär"
+msgstr ""
 
-msgid "supplier"
-msgstr "leverantör"
-
-msgid "available since"
-msgstr "tillgänglig sedan"
+msgid "available from"
+msgstr "tillgänglig från"
 
 msgid ""
-"Set an available date to restrict the page to be available only after a "
-"certain date and time. This is useful for pages describing sales campaigns "
+"Set an available from date to restrict the page to be available only after a"
+" certain date and time. This is useful for pages describing sales campaigns "
 "or other time-sensitive pages."
-msgstr "Ange ett tillgängligt datum för att begränsa sidan så att den endast är tillgänglig efter ett visst datum och tid. Detta är användbart för sidor som beskriver försäljningskampanjer eller andra tidskänsliga sidor."
+msgstr "Ställ in ett första tillgängligdatum för att begränsa för att göra sidan tillgänglig enbart under vissa datum. Detta är användbart för sidor som innehåller kampanjer/erbjudanden eller andra tidskänsliga sidor."
 
-msgid "available until"
-msgstr "tillgänglig fram till"
+msgid "available to"
+msgstr "tillgängligt till"
 
 msgid ""
-"Set an available date to restrict the page to be available only until a "
+"Set an available to date to restrict the page to be available only after a "
 "certain date and time. This is useful for pages describing sales campaigns "
 "or other time-sensitive pages."
-msgstr "Ställ in ett tillgängligt datum för att begränsa sidan så att den endast är tillgänglig till ett visst datum och tid. Detta är användbart för sidor som beskriver försäljningskampanjer eller andra tidskänsliga sidor."
+msgstr "Ställ in ett sista tillgängligdatum för att begränsa för att göra sidan tillgänglig enbart under vissa datum. Detta är användbart för sidor som innehåller kampanjer/erbjudanden eller andra tidskänsliga sidor."
 
 msgid "created by"
 msgstr "skapad av"
@@ -132,34 +123,34 @@ msgid "visible in menu"
 msgstr "synlig i menyn"
 
 msgid ""
-"Enable this if this page should have a visible link in the top menu of the "
-"store front."
-msgstr "Aktivera detta om den här sidan ska ha en synlig länk i butikens främsta meny."
+"Check this if this page should have a link in the top menu of the store "
+"front."
+msgstr "Markera detta om denna sida måste ha en länk i toppmenyn på butikens framsida."
 
 msgid "parent"
 msgstr "överordnad"
 
 msgid ""
-"Set this to a parent page if this page should be subcategorized (sub-menu) "
-"under another page."
-msgstr "Ställ in detta på en överordnad sida om den här sidan ska underkategoriseras (undermeny) under en annan sida."
+"Set this to a parent page if this page should be subcategorized under "
+"another page."
+msgstr "Ställ in denna som en överordnad sida om denna sida bör kategoriseras under en annan sida."
 
-msgid "display children on page"
-msgstr "visa barn på sidan"
+msgid "list children on page"
+msgstr "list underordnade sidor på sidan"
 
-msgid "Enable this if this page should display all of its children pages."
-msgstr "Aktivera detta om den här sidan ska visa alla sina barnsidor."
+msgid "Check this if this page should list its children pages."
+msgstr "Markera detta om denna sida bör lista sina underordnade sidor."
 
 msgid "show child page timestamps"
-msgstr "visa tidsstämpel för barn sidorna"
+msgstr ""
 
 msgid ""
-"Enable this if you want to show timestamps on the child pages. Please note, "
+"Check this if you want to show timestamps on the child pages. Please note, "
 "that this requires the children to be listed on the page as well."
-msgstr "Aktivera detta om du vill visa tidsstämplar på barnsidorna. Observera att detta kräver att barnen också listas på sidan."
+msgstr ""
 
 msgid "deleted"
-msgstr "raderade"
+msgstr ""
 
 msgid "title"
 msgstr "titel"
@@ -184,16 +175,16 @@ msgid ""
 " your page link.You can leave this empty and add all page content through "
 "placeholder editor in shop front.To edit the style of the page you can use "
 "the Snippet plugin which is in shop front editor."
-msgstr "Sidans innehåll. Det här är texten som visas när kunder klickar på din sidlänk. Du kan lämna detta tomt och lägga till allt sidinnehåll via platshållarredigeraren på webbplatsen. För att redigera sidans stil kan du använda kodavsnitt som finns framför butiken redaktör."
+msgstr ""
 
 msgid "Template path"
-msgstr "Mall sökväg"
+msgstr ""
 
 msgid "render title"
-msgstr "återge titel"
+msgstr ""
 
-msgid "Enable this if this page should have a visible title."
-msgstr "Aktivera detta om den här sidan ska ha en synlig titel."
+msgid "Check this if this page should have a visible title"
+msgstr ""
 
 msgid "page"
 msgstr "sida"
@@ -205,48 +196,48 @@ msgid "Untitled"
 msgstr "Namnlöst"
 
 msgid "Image"
-msgstr "Bild"
+msgstr ""
 
 msgid "The image of your object."
-msgstr "Bilden på ditt objekt."
+msgstr ""
 
 msgid "type"
-msgstr "typ"
+msgstr ""
 
 msgid ""
 "The title of your object as it should appear within the graph, e.g. The "
 "Rock."
-msgstr "Titeln på ditt objekt som det ska visas i diagrammet, t.ex. The Rock."
+msgstr ""
 
 msgid "Description"
-msgstr "Beskrivning"
+msgstr ""
 
 msgid "A one to two sentence description of your object."
-msgstr "En beskrivning av en till två meningar om ditt objekt."
+msgstr ""
 
 msgid "Section"
-msgstr "Sektion"
+msgstr ""
 
 msgid ""
 "A high-level section name, e.g. Technology. Only applicable when type is "
 "Article."
-msgstr "Ett sektionsnamn på hög nivå, t.ex. teknik. Gäller endast när typ är artikel."
+msgstr ""
 
 msgid "Tags"
-msgstr "Taggar"
+msgstr ""
 
 msgid ""
 "Tag words associated with this article. Only applicable when type is "
 "Article."
-msgstr "Taggord som är associerade med den här artikeln. Gäller endast när typ är artikel."
+msgstr ""
 
 msgid "Article author"
-msgstr "Artikelförfattare"
+msgstr ""
 
 msgid ""
 "The name of the author for the article. Only applicable when type is "
 "Article."
-msgstr "Namnet på författaren för artikeln. Gäller endast när typ är artikel."
+msgstr ""
 
 msgid "CMS Page Links"
 msgstr "Innehållshanteringssystemets (CMS) länkar"
@@ -261,15 +252,15 @@ msgid "Hide expired pages"
 msgstr "Dölja utgångna sidor"
 
 msgid "Default Page"
-msgstr "Standardsida"
+msgstr ""
 
 msgid "Page with sidebar"
-msgstr "Sida med sidofält"
+msgstr ""
 
 msgid ""
 "Fill the fields below to add extra OpenGraph information to the page meta.\n"
 "        If not informed, some values will be inferred from the page attributes."
-msgstr "Fyll i fälten nedan för att lägga till extra OpenGraph-information till sidans meta. Om det inte informeras kommer vissa värden att härledas från sidattributen."
+msgstr ""
 
 msgid "New Page"
 msgstr "Ny sida"

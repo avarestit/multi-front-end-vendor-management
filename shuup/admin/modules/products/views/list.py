@@ -13,7 +13,6 @@ from django.db.models import Q
 from django.utils.translation import ugettext_lazy as _
 
 from shuup.admin.shop_provider import get_shop
-from shuup.admin.supplier_provider import get_supplier
 from shuup.admin.utils.picotable import (
     ChoicesFilter, Column, Picotable, RangeFilter, TextFilter
 )
@@ -29,7 +28,6 @@ class ProductPicotable(Picotable):
         kind = self.request.GET.get("kind", "")
         if popup and kind == "product":  # Enable option to pick products
             out.update({"_id": object.product.id})
-            out["popup"] = True
         return out
 
 
@@ -130,7 +128,7 @@ class ProductListView(PicotableListView):
             suppliers_column.filter_config = get_suppliers_filter()
 
     def format_categories(self, instance):
-        return ", ".join(category.name for category in instance.categories.all()) or "-"
+        return ", ".join(list(instance.categories.values_list("translations__name", flat=True)))
 
     def format_suppliers(self, instance):
         return ", ".join(list(instance.suppliers.values_list("name", flat=True)))
@@ -161,11 +159,6 @@ class ProductListView(PicotableListView):
         if manufacturer_ids:
             q |= Q(product__manufacturer_id__in=manufacturer_ids)
         qs = qs.filter(q)
-
-        supplier = get_supplier(self.request)
-        if supplier:
-            qs = qs.filter(suppliers=supplier)
-
         return qs
 
     def get_object_abstract(self, instance, item):

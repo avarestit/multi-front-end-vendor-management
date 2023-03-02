@@ -2,20 +2,14 @@
 # Copyright (C) YEAR Free Software Foundation, Inc.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# Tuomas Suutari <tuomas.suutari@anders.fi>, 2016
-# Shuup Admin <admin@shuup.com>, 2016
-# Janne Tammi <janne@shuup.com>, 2017
-# Panu Tulimäki <panu@shuup.com>, 2020
-# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-22 17:55+0000\n"
-"PO-Revision-Date: 2016-06-28 10:48+0000\n"
-"Last-Translator: Panu Tulimäki <panu@shuup.com>, 2020\n"
+"POT-Creation-Date: 2017-12-06 23:43+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Panu Tulimäki <panu@shuup.com>, 2016\n"
 "Language-Team: Finnish (Finland) (https://www.transifex.com/shuup/teams/55306/fi_FI/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,6 +19,12 @@ msgstr ""
 
 msgid "Campaigns"
 msgstr "Kampanjat"
+
+msgid "Catalog Campaigns"
+msgstr "Katalogikampanjat"
+
+msgid "Show Catalog Campaigns"
+msgstr "Näytä katalogikampanjat"
 
 msgid "Basket Campaigns"
 msgstr "Korikampanjat"
@@ -38,17 +38,14 @@ msgstr "Kupongit"
 msgid "Show Coupons"
 msgstr "Näytä kupongit"
 
-msgid "Catalog Campaigns"
-msgstr "Katalogikampanjat"
-
-msgid "Show Catalog Campaigns"
-msgstr "Näytä katalogikampanjat"
-
 msgid "Set up a sales campaign"
 msgstr "Aseta myyntikampanja"
 
 msgid "New basket campaign"
 msgstr "Uusi korikampanja"
+
+msgid "New catalog campaign"
+msgstr "Uusi katalogikampanja"
 
 msgid "New coupon"
 msgstr "Uusi kuponki"
@@ -62,8 +59,8 @@ msgstr "Maksimiarvo"
 msgid "Leave empty for no maximum"
 msgstr "Jätä tyhjäksi, jos ei maksimia"
 
-msgid "Campaign end date can't be before a start date."
-msgstr "Kampanjan lopetuspäivä ei voi olla ennen aloituspäivää."
+msgid "Campaign end date can't be before start date."
+msgstr "Kampanjan loppu ei voi olla ennen alkua."
 
 msgid "Define the required coupon for this campaign."
 msgstr "Määritä kampanjalle vaadittu kuponki."
@@ -81,17 +78,17 @@ msgstr "Alennusprosentti tälle kampanjalle."
 msgid "Product %(product)s is not available in the %(shop)s shop."
 msgstr "Tuote %(product)sei ole saatavilla tässä kaupassa %(shop)s ."
 
-msgid "Only amount or percentage can be set, not both."
-msgstr "Vain määrä tai prosenttiosuus voidaan asettaa, ei molempia."
+msgid "Only amount or percentage can be set."
+msgstr "Vain määrä tai prosentti voidaan asettaa."
 
 msgid "Autogenerate code"
 msgstr "Tee koodi"
 
-msgid "Discount Code is already in use."
+msgid "Discount Code already in use."
 msgstr "Alennuskoodi on jo käytössä."
 
-msgid "Active Basket Campaigns"
-msgstr "Aktiiviset korikampanjat"
+msgid "Active Campaigns"
+msgstr "Aktivoi kampanjat"
 
 msgid "Catalog Campaign"
 msgstr "Katalogikampanja"
@@ -291,13 +288,6 @@ msgstr "päivät"
 msgid "Limit the campaign to selected days."
 msgstr "Rajaa kampanja valituille päiville."
 
-msgid "Product Variation Child"
-msgstr "Tuotevaihtoehtojen lapsi"
-
-msgid ""
-"Limit the campaign to match only variation children of the selected product."
-msgstr "Rajoita kampanja vastaamaan vain valitun tuotteen muunnelmaa."
-
 msgid "campaign"
 msgstr "kampanja"
 
@@ -340,9 +330,9 @@ msgstr "Tuotteesta johdettu alennus"
 msgid "per line discount"
 msgstr "rivikohtainen alennus"
 
-msgid "Disable this if you want to give discount for each matched product."
+msgid "Uncheck this if you want to give discount for each matched product."
 msgstr ""
-"Poista tämä käytöstä, jos haluat antaa alennuksen jokaiselle vastaavalle "
+"Jätä tämä valitsematta, jos haluat antaa alennusta jokaiselle täsmäävälle "
 "tuotteelle."
 
 msgid "Select discount amount and products."
@@ -377,11 +367,11 @@ msgid "active"
 msgstr "aktiivinen"
 
 msgid ""
-"Enable this if the campaign is currently active. Please also set a start and"
-" an end date."
+"Check this if the campaign is currently active. Please also set a start and "
+"end date."
 msgstr ""
-"Ota tämä käyttöön, jos kampanja on tällä hetkellä aktiivinen. Määritä myös "
-"aloitus- ja lopetuspäivä."
+"Valitse tämä, mikäli kampanja on aktiivinen. Aseta myös alku- ja "
+"loppupäivät."
 
 msgid "start date and time"
 msgstr "alkupäivämäärä ja aika"
@@ -428,23 +418,11 @@ msgstr "Katalogikampanja: %(name)s"
 msgid "basket line text"
 msgstr "koririvin teksti"
 
-msgid "This text will be shown in a basket."
-msgstr "Tämä teksti näkyy korissa."
+msgid "This text will be shown in basket."
+msgstr "Teksti näytetään korissa."
 
 msgid "coupon"
 msgstr "kuponki"
-
-msgid "supplier"
-msgstr "toimittaja"
-
-msgid ""
-"When set, this campaign will match only products from the selected supplier."
-" Rules and Effects will also be restricted to include only the products of "
-"this supplier."
-msgstr ""
-"Kun tämä asetus on määritetty, tämä kampanja vastaa vain valitun toimittajan"
-" tuotteita. Säännöt ja vaikutukset rajoitetaan myös koskemaan vain tämän "
-"toimittajan tuotteita."
 
 msgid "public name"
 msgstr "julkinen nimi"
@@ -453,8 +431,8 @@ msgstr "julkinen nimi"
 msgid "Basket Campaign: %(name)s"
 msgstr "Korikampanja: %(name)s"
 
-msgid "Can't have multiple active campaigns with same code."
-msgstr "Ei voi olla useita aktiivisia kampanjoita samalla koodilla."
+msgid "Can not have multiple active campaigns with same code."
+msgstr "Kaksi samaa koodia eivät voi olla yhtä aikaa aktiivisia."
 
 msgid "usage limit per customer"
 msgstr "Käyttökertojen raja asiakasta kohden"
@@ -466,20 +444,14 @@ msgid "usage limit"
 msgstr "Käyttökertojen raja"
 
 msgid ""
-"Set the absolute limit of usages for this coupon. If the limit is zero (0), "
-"coupon can't be used."
+"Set the absolute limit of usages for this coupon. If the limit is zero (0) "
+"coupon cannot be used."
 msgstr ""
-"Aseta tämän kuponin absoluuttinen käyttöraja. Jos raja on nolla (0), "
+"Aseta käyttökertojen raja tälle kupongille. Jos raja on nolla (0), niin "
 "kuponkia ei voi käyttää."
 
 msgid "is active"
 msgstr "aktiivinen"
-
-msgid "The shop where the coupon is active."
-msgstr "Kauppa, jossa kuponki on aktiivinen."
-
-msgid "Can not have multiple active campaigns with the same code."
-msgstr "Ei voi olla useita aktiivisia kampanjoita samalla koodilla."
 
 msgid "Base Catalog Filter"
 msgstr "Peruskatalogisuodin"
@@ -490,20 +462,20 @@ msgstr "Tuotetyyppi"
 msgid "product Types"
 msgstr "tuotetyypit"
 
-msgid "Limit the campaign only to selected product types."
-msgstr "Rajoita kampanja vain valittuihin tuotetyyppeihin."
+msgid "Limit the campaign to selected product types."
+msgstr "Rajoita kampanja valittuihin tuotetyyppeihin."
 
 msgid "Product"
 msgstr "Tuote"
 
-msgid "Limit the campaign only to selected products."
-msgstr "Rajoita kampanja vain valittuihin tuotteisiin."
+msgid "Limit the campaign to selected products."
+msgstr "Rajoita kampanja valituille tuotteille."
 
 msgid "Product Category"
 msgstr "Tuotekategoria"
 
-msgid "Limit the campaign only to products in selected categories."
-msgstr "Rajoita kampanja vain tuotteisiin valituissa luokissa."
+msgid "Limit the campaign to products in selected categories."
+msgstr "Rajoita kampanja tuotteille valituista kategorioista."
 
 msgid "group"
 msgstr "ryhmä"
@@ -514,8 +486,8 @@ msgstr "minimimäärä"
 msgid "max amount"
 msgstr "maksimimäärä"
 
-msgid "Can not add sales limits for default contact groups."
-msgstr "Ei voida lisätä myyntirajoja oletusyhteysryhmille."
+msgid "Can not add sales limits for default contact groups"
+msgstr "Oletuskontaktiryhmille ei voi asettaa myyntirajoja."
 
 msgid "Context Condition"
 msgstr "Kontekstiehto"
@@ -566,6 +538,10 @@ msgid "This section shows all the <b>active</b> campaigns this product is in."
 msgstr ""
 "Tämä osio näyttää kaikki <b>aktiiviset</b> kampanjat, joista tämä tuote "
 "löytyy."
+
+#, python-format
+msgid "Active campaings for shop: %(shop)s"
+msgstr "Kaupan %(shop)s aktiiviset kampanjat."
 
 msgid "Rules"
 msgstr "Säännöt"

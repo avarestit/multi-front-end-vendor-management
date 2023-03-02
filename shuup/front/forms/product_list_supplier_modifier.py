@@ -36,8 +36,9 @@ class SupplierProductListFilter(SimpleProductListModifier):
         if category:
             shop_products_qs = shop_products_qs.filter(Q(primary_category=category) | Q(categories=category))
 
-        queryset = Supplier.objects.enabled(shop=request.shop).filter(
-            shop_products__in=shop_products_qs
+        queryset = Supplier.objects.enabled().filter(
+            Q(shop_products__in=shop_products_qs),
+            Q(shops=request.shop)
         ).distinct()
         if not queryset.exists():
             return

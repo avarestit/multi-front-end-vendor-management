@@ -60,7 +60,6 @@ def test_category_detail(client):
     ]
     for name, percentage_from_original_price in supplier_data:
         supplier = Supplier.objects.create(name=name)
-        supplier.shops.add(shop)
 
         for product in products:
             shop_product = product.get_shop_instance(shop)
